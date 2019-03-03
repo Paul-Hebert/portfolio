@@ -13,5 +13,8 @@
   "author": "Paul Hebert",
   "bugs": {
     "url": "https://github.com/Paul-Hebert/portfolio/issues"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
   }
 }
