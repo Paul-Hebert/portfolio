@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A public redesign of my personal portfolio",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul-Hebert/portfolio.git"
+  },
+  "author": "Paul Hebert",
+  "bugs": {
+    "url": "https://github.com/Paul-Hebert/portfolio/issues"
+  }
+}
