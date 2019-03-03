@@ -4,7 +4,7 @@
   "description": "A public redesign of my personal portfolio",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx gulp"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,10 @@
     "url": "https://github.com/Paul-Hebert/portfolio/issues"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^0.7.1",
     "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-shell": "^0.7.0",
+    "npx": "^10.2.0"
   }
 }
