@@ -2,6 +2,10 @@
 <html>
     <head>
         <title>{{ data.title }}</title>
+
+        {{#each stylesheets}}
+            <link rel="stylesheet" href="{{this}}.css">
+        {{/each}}
     </head>
     <body>
         {{{ content }}}
