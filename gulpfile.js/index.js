@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const shell = require('gulp-shell');
 const postcss = require('gulp-postcss')
 const sourcemaps = require('gulp-sourcemaps')
+const clean = require('gulp-clean');
+
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
 
@@ -10,6 +12,10 @@ const outputDirectory = './_site/'
 gulp.task('reload', function(done) {
     browserSync.reload();
     done();
+});
+
+gulp.task('clean', function () {
+    return gulp.src(outputDirectory + "**", { read: false }).pipe(clean());
 });
 
 gulp.task('css', () => {
@@ -34,4 +40,10 @@ gulp.task('serve', function() {
     });
 });
 
-gulp.task('default', gulp.series('build', gulp.parallel('serve', 'watch')));
+gulp.task('default', 
+    gulp.series('clean',
+        gulp.series('build', 
+            gulp.parallel('serve', 'watch')
+        )
+    )
+);
